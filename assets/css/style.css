@@ -1,0 +1,30 @@
+.counter ul {
+    padding: 0;
+}
+
+.counter li {
+    display: inline-block;
+    list-style-type: none;
+}
+  
+.counter li span {
+    display: block;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.resources .link {
+    margin: 1em;
+}
