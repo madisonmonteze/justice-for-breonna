@@ -7,6 +7,10 @@
     font-style: normal;
 }
 
+html, body {
+    scroll-snap-type: y mandatory;
+}
+
 body {
     font-family: 'toytrial';
     background-color: #191919;
@@ -15,27 +19,6 @@ body {
 
 .upper {
     text-transform: uppercase;
-}
-
-.counter, .main, .resources {
-    min-height: 100vh;
-}
-
-
-.counter ul {
-    padding: 0;
-}
-
-.counter li {
-    display: inline-block;
-    list-style-type: none;
-    font-size: 1em;
-    padding: 1em;
-}
-  
-.counter li span {
-    display: block;
-    font-size: 10em;
 }
 
 .flex-center {
@@ -52,6 +35,101 @@ body {
     flex-direction: column;
 }
 
+.counter, .main, .resources {
+    min-height: 100vh;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background-color: #191919;
+    scroll-snap-align: start;
+}
+
+.counter ul {
+    padding: 0;
+}
+
+.counter li {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 24px;
+    padding: 1em;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+  
+.counter li span {
+    display: block;
+    font-size: 10em;
+}
+
+.main {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.main h1 {
+    font-size: 10em;
+    letter-spacing: 8px;
+    line-height: 0.9;
+}
+
+.resources h2 {
+    font-size: 5em;
+    letter-spacing: 4px;
+}
+
 .resources .link {
-    margin: 1em;
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    margin: 2em;
+    text-align: center;
+}
+
+.resources .link a {
+    text-decoration: none;
+    color: inherit;
+    -moz-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+}
+
+.resources .link a:hover {
+    color: pink;
+    text-shadow:0px 0px 15px pink;
+    -moz-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+}
+
+/* .resources .link:hover {
+    border: 1px solid pink;
+} */
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .counter li {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+    }
+      
+    .counter li span {
+        font-size: 4em;
+    }
+
+    .main h1 {
+        font-size: 3.4em;
+        letter-spacing: 4px;
+        line-height: 1;
+    }
+    
+    .resources h2 {
+        font-size: 2em;
+    }
 }
