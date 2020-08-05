@@ -7,9 +7,9 @@
     font-style: normal;
 }
 
-html, body {
+/* html, body {
     scroll-snap-type: y mandatory;
-}
+} */
 
 body {
     font-family: 'toytrial';
@@ -37,9 +37,9 @@ body {
 
 .counter, .main, .resources {
     min-height: 100vh;
-    position: sticky;
+    /* position: sticky;
     position: -webkit-sticky;
-    top: 0;
+    top: 0; */
     background-color: #191919;
     scroll-snap-align: start;
 }
@@ -85,6 +85,12 @@ body {
     text-align: center;
 }
 
+.resources .link ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
 .resources .link a {
     text-decoration: none;
     color: inherit;
@@ -101,6 +107,15 @@ body {
     -o-transition: all 0.4s ease-in;
     -webkit-transition: all 0.4s ease-in;
     transition: all 0.4s ease-in;
+}
+
+.resources .donate svg {
+    margin-right: 100px;
+}
+
+.resources .donate h3 {
+    padding-left: 50px;
+    margin-top: -20px;
 }
 
 /* .resources .link:hover {
