@@ -24,5 +24,5 @@ window.onscroll = function () {
 
 function scrollRotate() {
   let twirl = document.getElementById("twirl");
-  twirl.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
+  twirl.style.transform = "rotate(" + window.pageYOffset/2.5 + "deg)";
 }
