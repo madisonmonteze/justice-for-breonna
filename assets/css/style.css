@@ -7,14 +7,38 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'campagnon';
+    src: url('../fonts/Compagnon-Medium.woff2') format('woff2'),
+         url('../fonts/Compagnon-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* VARIABLES */
+:root {
+    --purple:#6205df;
+    --beige: #f3eeea;
+    --brown: #d69f65;
+    --black: #191919;
+    --whitesmoke: #f5f5f5;
+}
+
+
 /* html, body {
     scroll-snap-type: y mandatory;
 } */
 
 body {
     font-family: 'toytrial';
-    background-color: #191919;
-    color: #f5f5f5;
+    background-color: var(--beige);
+    color: var(--purple);
+    transition: background-color 0.6s cubic-bezier(0.7, 0, 0.7, 1);
+}
+
+body.dark {
+    background-color: var(--brown);
+    color: var(--black);
 }
 
 .upper {
@@ -40,7 +64,6 @@ body {
     /* position: sticky;
     position: -webkit-sticky;
     top: 0; */
-    background-color: #191919;
     scroll-snap-align: start;
 }
 
@@ -49,18 +72,50 @@ body {
 }
 
 .counter li {
+    font-family: 'campagnon';
     display: inline-block;
     list-style-type: none;
-    font-size: 24px;
+    font-size: 18px;
     padding: 1em;
     text-align: center;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
 }
   
 .counter li span {
+    font-family: 'toytrial';
     display: block;
-    font-size: 10em;
+    font-size: 12em;
 }
+
+/* Color Changer */
+div.toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+
+/* Resources Link */
+div.info {
+    font-family: 'campagnon';
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 10px 10px 10px;
+    border: 2px solid var(--purple);
+    background-color: var(--beige);
+}
+
+div.info a {
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+}
+
+
+
+
+/* MAIN */
 
 .main {
     text-align: center;
@@ -78,14 +133,15 @@ body {
     letter-spacing: 4px;
 }
 
-.resources .link {
-    font-size: 1.25em;
+.resources .link-list {
+    font-family: 'campagnon';
+    font-size: 1em;
     letter-spacing: 1px;
     margin: 2em;
-    text-align: center;
+    text-align: left;
 }
 
-.resources .link ul {
+/* .resources .link ul {
     list-style-type: none;
     padding: 0;
     text-align: left;
@@ -116,7 +172,7 @@ body {
 .resources .donate h3 {
     padding-left: 50px;
     margin-top: -20px;
-}
+} */
 
 /* .resources .link:hover {
     border: 1px solid pink;

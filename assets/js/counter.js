@@ -1,3 +1,4 @@
+// counter
 const second = 1000,
       minute = second * 60,
       hour = minute * 60,
@@ -15,3 +16,13 @@ let countDown = new Date('Mar 13, 2020 00:00:00').getTime(),
         document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
 
     }, second)
+
+// rotate on scroll
+window.onscroll = function () {
+  scrollRotate();
+};
+
+function scrollRotate() {
+  let twirl = document.getElementById("twirl");
+  twirl.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
+}
