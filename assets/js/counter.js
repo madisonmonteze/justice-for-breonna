@@ -23,6 +23,6 @@ window.onscroll = function () {
 };
 
 function scrollRotate() {
-  let twirl = document.getElementById("twirl");
+  let twirl = document.querySelector(".twirl");
   twirl.style.transform = "rotate(" + window.pageYOffset/2.5 + "deg)";
 }
