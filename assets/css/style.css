@@ -15,6 +15,15 @@
     font-style: normal;
 }
 
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
 /* VARIABLES */
 :root {
     --purple:#6205df;
@@ -56,9 +65,13 @@ html.purple {
 	color: var(--purple);
 }
 
-div.twirl.purple {
+html.purple nav.twirl {
     border-color: var(--purple);
     background-color: var(--beige);
+}
+
+html.purple svg {
+    stroke: var(--purple);
 }
 
 html.brown {
@@ -66,9 +79,13 @@ html.brown {
 	color: var(--black);
 }
 
-div.twirl.brown {
+html.brown nav.twirl{
     border-color: var(--black);
     background-color: var(--brown);
+}
+
+html.brown svg {
+    stroke: var(--black);
 }
 
 html.black {
@@ -76,14 +93,39 @@ html.black {
 	color: var(--whitesmoke);
 }
 
-div.twirl.black {
+html.black nav.twirl {
     border-color: var(--whitesmoke);
     background-color: var(--black);
 }
 
-
+html.black svg {
+    stroke: var(--whitesmoke);
+}
 
 /* FIXED ITEMS */
+
+div.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--whitesmoke);
+    z-index: 10;
+    transition: opacity 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* div.loading img {
+    animation: loading 2s infinite linear;
+} */
+
+div.loading.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
 
 /* Resources Link */
 nav.twirl {
@@ -91,14 +133,16 @@ nav.twirl {
     position: fixed;
     bottom: 40px;
     right: 40px;
-    padding: 8px 10px 10px 10px;
+    padding: 6px 12px 10px;
     border: 2px solid;
+    transition: opacity 0.5s ease;
 }
 
 nav.twirl a {
     text-decoration: none;
     color: inherit;
     text-transform: uppercase;
+    font-size: 14px;
 }
 
 nav.twirl a.hidden {
