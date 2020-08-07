@@ -14,11 +14,11 @@ $("nav a").on("click", function (event) {
     $.ajax({
         url: href,
         success: function (data) {
-            $("body").fadeOut(250, function () {
-                const newPage = $(data).filter("body").html()
+            $("section").fadeOut(250, function () {
+                const newPage = $(data).filter("section").html()
 
-                $("body").html(newPage)
-                $("body").fadeIn(250)
+                $("section").html(newPage)
+                $("section").fadeIn(250)
             })
         }
     })
