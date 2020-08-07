@@ -1,3 +1,8 @@
+// loading
+setTimeout(function () {
+  document.querySelector("div.loading").classList.add("hidden")
+}, 1500)
+
 // counter
 const second = 1000,
       minute = second * 60,
