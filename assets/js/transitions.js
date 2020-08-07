@@ -15,9 +15,9 @@ $("nav a").on("click", function (event) {
         url: href,
         success: function (data) {
             $("body").fadeOut(250, function () {
-                const newPage = $(data).filter("body").html()
+                const newPage = $(data).filter("section").html()
 
-                $("body").html(newPage)
+                $("section").html(newPage)
                 $("body").fadeIn(250)
             })
         }
