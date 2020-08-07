@@ -8,6 +8,9 @@ $("nav a").on("click", function (event) {
     $("nav a").removeClass("active")
     $(this).addClass("active")
 
+    $("nav a").removeClass("hidden")
+    $(this).addClass("hidden")
+
     $.ajax({
         url: href,
         success: function (data) {
