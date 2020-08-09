@@ -37,11 +37,11 @@ let countDown = new Date('Mar 13, 2020 00:00:00').getTime(),
 
 
 // rotate on scroll
-window.onscroll = function () {
-  scrollRotate();
-};
+// window.onscroll = function () {
+//   scrollRotate();
+// };
 
-function scrollRotate() {
-  let twirl = document.querySelector(".twirl");
-  twirl.style.transform = "rotate(" + window.pageYOffset/2.5 + "deg)";
-}
+// function scrollRotate() {
+//   let twirl = document.querySelector(".twirl");
+//   twirl.style.transform = "rotate(" + window.pageYOffset/2.5 + "deg)";
+// }

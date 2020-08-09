@@ -1,4 +1,4 @@
-/* TYPOGRAPHY */
+/* FONTS */
 @font-face {
     font-family: 'toytrial';
     src: url('../fonts/toytrial-regular.woff2') format('woff2'),
@@ -15,14 +15,14 @@
     font-style: normal;
 }
 
-@keyframes loading {
+/* @keyframes loading {
     0% {
         transform: rotate(0deg);
     }
     100% {
         transform: rotate(-360deg);
     }
-}
+} */
 
 /* VARIABLES */
 :root {
@@ -31,6 +31,8 @@
     --brown: #d69f65;
     --black: #191919;
     --whitesmoke: #f5f5f5;
+    --serif: 'toytrial';
+    --sans: 'campagnon';
 }
 
 .upper {
@@ -54,6 +56,16 @@
     flex-direction: column;
 }
 
+/* TYPOGRAPHY */
+
+h1, h2, h3, h4, h5, h6, span {
+    font-family: var(--serif);
+}
+
+p, a {
+    font-family: var(--sans);
+}
+
 /* COLOR SCHEMES */
 
 /* Purple = beige bg, purple color */
@@ -65,10 +77,10 @@ html.purple {
 	color: var(--purple);
 }
 
-html.purple nav.twirl {
+/* html.purple nav.twirl {
     border-color: var(--purple);
     background-color: var(--beige);
-}
+} */
 
 html.purple svg {
     stroke: var(--purple);
@@ -79,10 +91,10 @@ html.brown {
 	color: var(--black);
 }
 
-html.brown nav.twirl{
+/* html.brown nav.twirl{
     border-color: var(--black);
     background-color: var(--brown);
-}
+} */
 
 html.brown svg {
     stroke: var(--black);
@@ -93,10 +105,10 @@ html.black {
 	color: var(--whitesmoke);
 }
 
-html.black nav.twirl {
+/* html.black nav.twirl {
     border-color: var(--whitesmoke);
     background-color: var(--black);
-}
+} */
 
 html.black svg {
     stroke: var(--whitesmoke);
@@ -129,12 +141,12 @@ div.loading.hidden {
 
 /* Resources Link */
 nav.twirl {
-    font-family: 'campagnon';
+    font-family: var(--sans);
     position: fixed;
-    bottom: 40px;
+    top: 40px;
     right: 40px;
     padding: 6px 12px 10px;
-    border: 2px solid;
+    /* border: 2px solid; */
     transition: opacity 0.5s ease;
 }
 
@@ -152,11 +164,15 @@ nav.twirl a.hidden {
 
 /* MAIN */
 body {
-    font-family: 'toytrial';
+    /* font-family: var(--serif); */
     transition: background-color 0.6s cubic-bezier(0.7, 0, 0.7, 1);
 }
 
-.counter, .main, .resources {
+section {
+    margin: 25px;
+}
+
+.counter, .main, .details {
     min-height: 100vh;
 }
 
@@ -171,7 +187,7 @@ body {
 }
 
 .count-up .count-item {
-    font-family: 'campagnon';
+    /* font-family: var(--sans); */
     display: inline-block;
     list-style-type: none;
     font-size: 18px;
@@ -181,7 +197,7 @@ body {
 }
   
 .count-up .count-item span {
-    font-family: 'toytrial';
+    /* font-family: var(--serif); */
     display: block;
     font-size: 12em;
 }
@@ -197,27 +213,28 @@ body {
     line-height: 0.9;
 }
 
-.resources h2 {
+.details h2 {
     font-size: 5em;
     letter-spacing: 4px;
     text-align: center;
 }
 
-.resources {
+.details {
     justify-content: center;
 }
 
-.resources .link-list {
-    font-family: 'campagnon';
+.details .info {
+    /* font-family: var(--sans); */
     font-size: 1em;
     letter-spacing: 1px;
     margin: 2em;
     text-align: left;
-    width: 66.66%;
+    justify-content: flex-end;
 }
 
-.resources .link-list p {
+.details .info p {
     margin: 1em;
+    width: 33.33%;
 }
 
 /* .resources .link ul {
@@ -257,33 +274,51 @@ body {
     border: 1px solid pink;
 } */
 
+/* RESOURCES PAGE */
+
+
 
 /* MOBILE */
 @media (max-width: 768px) {
     body {
         padding: 1em;
     }
+
+    section {
+        margin: 10px;
+    }
     
     .row {
         flex-direction: column;
     }
 
-    .counter li {
-        font-size: 16px;
-        letter-spacing: 1.5px;
+    .counter div.count-up {
+        padding-top: 1em;
+    }
+
+    .counter .count-item {
+        font-size: 1em;
+        letter-spacing: 1.2px;
     }
       
-    .counter li span {
-        font-size: 4em;
+    .counter .count-item span {
+        font-size: 5em;
+    }
+
+    .counter .count-item p {
+        margin: 0;
     }
 
     .main h1 {
-        font-size: 3.4em;
+        font-size: 5em;
         letter-spacing: 4px;
         line-height: 1;
     }
     
-    .resources h2 {
-        font-size: 2em;
+    .details h2 {
+        font-size: 4em;
+    }
+    .details .info p {
+        width: 100%;
     }
 }
