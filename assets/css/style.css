@@ -65,10 +65,10 @@ html.purple {
 	color: var(--purple);
 }
 
-html.purple nav.twirl {
+/* html.purple nav.twirl {
     border-color: var(--purple);
     background-color: var(--beige);
-}
+} */
 
 html.purple svg {
     stroke: var(--purple);
@@ -79,10 +79,10 @@ html.brown {
 	color: var(--black);
 }
 
-html.brown nav.twirl{
+/* html.brown nav.twirl{
     border-color: var(--black);
     background-color: var(--brown);
-}
+} */
 
 html.brown svg {
     stroke: var(--black);
@@ -93,10 +93,10 @@ html.black {
 	color: var(--whitesmoke);
 }
 
-html.black nav.twirl {
+/* html.black nav.twirl {
     border-color: var(--whitesmoke);
     background-color: var(--black);
-}
+} */
 
 html.black svg {
     stroke: var(--whitesmoke);
@@ -131,10 +131,10 @@ div.loading.hidden {
 nav.twirl {
     font-family: 'campagnon';
     position: fixed;
-    bottom: 40px;
+    top: 40px;
     right: 40px;
     padding: 6px 12px 10px;
-    border: 2px solid;
+    /* border: 2px solid; */
     transition: opacity 0.5s ease;
 }
 
