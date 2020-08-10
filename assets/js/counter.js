@@ -1,7 +1,7 @@
 // loading
 setTimeout(function () {
   document.querySelector("div.loading").classList.add("hidden")
-}, 1500)
+}, 1000)
 
 // counter
 const second = 1000,
@@ -33,15 +33,3 @@ let countDown = new Date('Mar 13, 2020 00:00:00').getTime(),
         document.getElementById('seconds').innerText = (Math.floor((distance % (minute)) / second)).pad(2);
 
     }, second)
-
-
-
-// rotate on scroll
-// window.onscroll = function () {
-//   scrollRotate();
-// };
-
-// function scrollRotate() {
-//   let twirl = document.querySelector(".twirl");
-//   twirl.style.transform = "rotate(" + window.pageYOffset/2.5 + "deg)";
-// }
