@@ -418,6 +418,10 @@ section .educate .sticker a {
         width: 100%;
     }
 
+    .call .header {
+        margin-right: 0;
+    }
+
     .call-list .grid, .educate .grid {
         display: flex;
         flex-direction: column;
@@ -450,13 +454,21 @@ section .educate .sticker a {
     }
 
     .share .share-info {
-        margin-top: 50px;
         width: 100%;
+        margin-left: 0;
     }
 
     .share .share-info p {
         margin-right: 100px;
         text-align: left;
+    }
+
+    .share .header .desc, .vote .header .desc {
+        margin-right: 0;
+    }
+
+    .educate .header {
+        margin-bottom: 20px;
     }
 
     .educate .list-item p {
