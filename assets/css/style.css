@@ -491,4 +491,8 @@ section .educate .sticker a {
         margin-top: 0;
     }
 
+    .vote .header .desc p {
+        text-align: left;
+    }
+
 }
