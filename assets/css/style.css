@@ -372,6 +372,10 @@ section .educate .sticker a {
     border-bottom: none;
 }
 
+.vote .header .desc {
+    margin-top: 100px;
+}
+
 /* MOBILE */
 @media (max-width: 1080px) {
     section {
@@ -481,6 +485,10 @@ section .educate .sticker a {
 
     .vote {
         margin-bottom: 100px;
+    }
+
+    .vote .header .desc {
+        margin-top: 0;
     }
 
 }
