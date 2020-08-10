@@ -17,8 +17,6 @@
     font-style: italic;
 }
 
-
-
 /* VARIABLES */
 :root {
     --lavender:#B4B2DD;
@@ -63,7 +61,8 @@
 }
 
 /* TYPOGRAPHY */
-html {font-size: 100%;} /*16px*/
+
+html {font-size: 87.5%;}
 
 body {
     font-weight: 400;
@@ -71,9 +70,10 @@ body {
     transition: background-color 0.6s cubic-bezier(0.7, 0, 0.7, 1);
 }
 
-p {
+p, li {
     margin-bottom: 1.15rem;
     font-family: var(--sans);
+    text-align: justify;
 }
 
 h1, h2, h3, h4, h5, span {
@@ -86,21 +86,22 @@ h1, h2, h3, h4, h5, span {
 h1 {
     margin-top: 0;
     font-size: 7.594em;
-  }
+}
+
+h2 {font-size: 5.063em;}
+
+h3 {font-size: 3.375em;}
+
+h4 {font-size: 2.25em;}
+
+h5 {font-size: 1.5em;}
   
-  h2 {font-size: 5.063em;}
-  
-  h3 {font-size: 3.375em;}
-  
-  h4 {font-size: 2.25em;}
-  
-  h5 {font-size: 1.5em;}
-  
-  small, .text_small {font-size: 0.667em;}
+small, .text_small {font-size: 0.667em;}
 
 a {
     text-decoration: none;
     color: inherit;
+    font-family: inherit;
 }
 
 /* COLOR SCHEMES */
@@ -115,7 +116,7 @@ html.lavender {
 }
 
 html.lavender svg {
-    stroke: var(--black);
+    fill: var(--black);
 }
 
 html.lavender section a {
@@ -128,7 +129,7 @@ html.coffee {
 }
 
 html.coffee svg {
-    stroke: var(--black);
+    fill: var(--black);
 }
 
 html.coffee section a {
@@ -141,7 +142,7 @@ html.black {
 }
 
 html.black svg {
-    stroke: var(--white);
+    fill: var(--white);
 }
 
 html.black section a {
@@ -263,8 +264,78 @@ section {
 } */
 
 /* RESOURCES PAGE */
+.header h1 { 
+    font-size: 12em;
+}
 
+.call, .donate, .share, .educate, .vote {
+    margin-top: 100px;
+}
 
+/* Call Section */
+.call .header .desc, .share .header .desc, .vote .header {
+    align-items: flex-end;
+    margin-left: 100px;
+}
+
+.call .list {
+    margin-top: 50px;
+}
+
+.call-list .grid, .educate .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 50px;
+    justify-items: start;
+    align-items: start;
+    margin-left: 100px;
+}
+
+.call-list .list-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.call-list .list-item li {
+    margin-bottom: 0;
+}
+
+.call-list .list-item a {
+    border: none;
+}
+
+/* Donate Section */
+.donate .header h1, .educate .header h1 {
+    text-align: right;
+}
+
+.donate .header .desc, .educate .header .desc {
+    align-items: flex-start;
+    margin-left: 50px;
+    width: 80%;
+}
+
+.donate .donate-details p {
+    margin: 50px;
+}
+
+/* Share Section */
+.share .share-info {
+    margin-top: 50px;
+    width: 66.66%;
+}
+
+/* Educate Section */
+.educate .header .desc {
+    margin-left: 100px;
+}
+
+.author {
+    font-family: 'Futura', Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
 
 /* MOBILE */
 @media (max-width: 768px) {
